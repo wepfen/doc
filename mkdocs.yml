@@ -1,8 +1,7 @@
 site_name: Docs | Bagne Tyron-Jean
 theme:
   name: readthedocs
-  highlightjs: true
-  
+  highlightjs: true  
 plugins:
   - search
   - mkdocstrings:

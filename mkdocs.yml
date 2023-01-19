@@ -1,4 +1,5 @@
 site_name: Docs | Bagne Tyron-Jean
+theme:
   name: readthedocs
   highlightjs: true
   

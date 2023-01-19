@@ -1,1 +1,9 @@
 site_name: Bagne Tyron-Jean | pFsense
+
+plugins:
+  - search
+  - mkdocstrings:
+  
+        python:
+          options:
+            docstring_style: sphinx

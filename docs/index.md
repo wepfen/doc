@@ -1,4 +1,4 @@
-[![Documentation Status](https://readthedocs.org/projects/tyron-pfsense/badge/?version=latest)](https://tyron-pfsense.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/tyron-docs/badge/?version=latest)](https://tyron-docs.readthedocs.io/fr/latest/?badge=latest)
 
 # Accueil
 

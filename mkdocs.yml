@@ -1,5 +1,4 @@
-site_name: Bagne Tyron-Jean | pFsense
-theme:
+site_name: Docs | Bagne Tyron-Jean
   name: readthedocs
   highlightjs: true
   

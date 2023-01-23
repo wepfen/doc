@@ -27,11 +27,11 @@ Les commandes précédentes mettent à jours respectvement les sources des paque
 zypper install nextcloud
 ```
 >### **Au cas où**
->Choisir `r` lorsqu'il y a cette invite: `Abandoner, réessayer, ignorer ? [a,r,i...? affiche toutes les options] >(a):`
+>Choisir `r` lorsqu'il y a cette invite: `Abandoner, réessayer, ignorer ? [a,r,i...? affiche toutes les options] (a):`
 
 <br><br>
 ## Installation de Mariadb
-MariaDB a été en même temps que Nextcloud grâce à la commande précédente, mais voici la 
+MariaDB a été installé en même temps que Nextcloud grâce à la commande précédente, mais voici la 
 commande pour l'installer:
 ```
 zypper install mariadb

@@ -13,15 +13,15 @@ markdown_extensions:
   - markdown_include.include:
       base_path: .
   - admonition
-nav:
-    - Home: 'index.md' 
-    - SIO:
-      - pFsense:
-        - Introduction: '/sio/pfsense/index'
-      - Nextcloud:
-        - Introduction: '/sio/nextcloud/introduction'
-        - Installation: '/sio/nextcloud/installation'
-      - GLPI:
-        - Introduction: '/sio/glpi/index'
+#nav:
+#    - Home: 'index.md' 
+#    - SIO:
+#      - pFsense:
+#        - Introduction: '/sio/pfsense/index'
+#      - Nextcloud:
+#        - Introduction: '/sio/nextcloud/introduction'
+#        - Installation: '/sio/nextcloud/installation'
+#      - GLPI:
+#        - Introduction: '/sio/glpi/index'
        
 #docs_dir: 'docs'

@@ -1,4 +1,4 @@
-# 1 - Introduction
+# Introduction
  
 Nextcloud est un logiciel de stockage en réseau. Cette solution est intéressante car on peut tout gérer en interne sur notre propre infrastructure contrairement à google drive, par exemple, où nos données sont entre les mains de quelqu'un d'autre. Dans ce document je vais vous montrer l'installation sur une machine linux **openSUSE 15.3**.
 

@@ -1,7 +1,7 @@
 # Installation
 
->###**Important**:
->
+>### **Important**
+
 >Toutes les commandes sont à faire en **root**
 
 

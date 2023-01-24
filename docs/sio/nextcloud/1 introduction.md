@@ -20,3 +20,7 @@ On installera:
 Plus de possiblités sur ce [lien](https://docs.nextcloud.com/server/latest/admin_manual/installation/system_requirements.html)
 
 <br><br>
+
+## Sources de documentation
+* https://docs.nextcloud.com/server/latest/admin_manual/contents.html
+*https://en.opensuse.org/SDB:Nextcloud

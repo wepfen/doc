@@ -1,6 +1,8 @@
 site_name: Docs | Bagne Tyron-Jean
 site_url: https://tyron-docs.readthedocs.io/
 use_directory_urls: false
+docs_dir: 'docs'
+
 theme:
   name: readthedocs
   highlightjs: true  
@@ -15,6 +17,7 @@ markdown_extensions:
   - markdown_include.include:
       base_path: .
   - admonition
+
 #nav:
 #    - Home: 'index.md' 
 #    - SIO:
@@ -26,4 +29,4 @@ markdown_extensions:
 #      - GLPI:
 #        - Introduction: '/sio/glpi/index'
        
-#docs_dir: 'docs'
+

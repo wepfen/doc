@@ -6,7 +6,6 @@
 ## Mises à jour
 Les mises à jours doivent être effectuées avant d'installer le reste:
 >### **Important**
-
 >Toutes les commandes sont à faire en **root**
 ```
 zypper refresh 

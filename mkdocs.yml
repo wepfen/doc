@@ -19,11 +19,11 @@ markdown_extensions:
       base_path: .
   - admonition
 
-nav:
-    - Home: 'index.md'
-    - SIO:
-      - pFsense: 'sio/pfsense/index.md'
-      - Nextcloud: 'sio/nextcloud/index.md'
-      - Introduction: 'sio/nextcloud/introduction.md'
-      - Installation: 'sio/nextcloud/installation.md'
-      - GLPI: 'sio/glpi/index.md'
+#nav:
+#    - Home: 'index.md'
+#    - SIO:
+#      - pFsense: 'sio/pfsense/index.md'
+#      - Nextcloud: 'sio/nextcloud/index.md'
+#      - Introduction: 'sio/nextcloud/introduction.md'
+#      - Installation: 'sio/nextcloud/installation.md'
+#      - GLPI: 'sio/glpi/index.md'

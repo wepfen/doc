@@ -22,9 +22,8 @@ nav:
     - SIO:
       - pFsense: 'sio/pfsense/index.md'
       - Nextcloud: 'sio/nextcloud/index.md'
-#        - Introduction: 'docs/sio/nextcloud/introduction'
-#        - Installation: 'docs/sio/nextcloud/installation'
-#      - GLPI:
-#        - Introduction: 'docs/sio/glpi/index'
+        - Introduction: 'sio/nextcloud/introduction.md'
+        - Installation: 'sio/nextcloud/installation.md'
+      - GLPI: 'sio/glpi/index.md'
        
 

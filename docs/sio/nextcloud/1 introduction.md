@@ -22,5 +22,5 @@ Plus de possiblités sur ce [lien](https://docs.nextcloud.com/server/latest/admi
 <br><br>
 
 ## Sources de documentation
-* https://docs.nextcloud.com/server/latest/admin_manual/contents.html
-*https://en.opensuse.org/SDB:Nextcloud
+* [Documentation Nextcloud](https://docs.nextcloud.com/server/latest/admin_manual/contents.html)
+* [Site openSUSE](https://en.opensuse.org/SDB:Nextcloud)

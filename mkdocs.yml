@@ -1,6 +1,6 @@
 site_name: Docs | Bagne Tyron-Jean
 site_url: https://tyron-docs.readthedocs.io/fr/latest/
-base_url: /
+base_url: /fr/latest/
 use_directory_urls: false
 docs_dir: 'docs'
 
@@ -23,7 +23,7 @@ nav:
     - Home: 'index.md' 
     - SIO:
       - pFsense: 'sio/pfsense/index.md'
-      - Nextcloud: '/sio/nextcloud/index.md'
+      - Nextcloud: 'sio/nextcloud/index.md'
 #        - Introduction: 'docs/sio/nextcloud/introduction'
 #        - Installation: 'docs/sio/nextcloud/installation'
 #      - GLPI:

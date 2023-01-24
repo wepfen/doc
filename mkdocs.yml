@@ -1,4 +1,6 @@
 site_name: Docs | Bagne Tyron-Jean
+site_url: https://tyron-docs.readthedocs.io/
+use_directory_urls: false
 theme:
   name: readthedocs
   highlightjs: true  

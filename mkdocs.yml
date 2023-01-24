@@ -21,7 +21,7 @@ markdown_extensions:
 nav:
     - Home: 'index.md' 
     - SIO:
-      - pFsense: 'docs/sio/pfsense/index.md'
+      - pFsense: 'docs/sio/pfsense/index.html'
 #      - Nextcloud:
 #        - Introduction: 'docs/sio/nextcloud/introduction'
 #        - Installation: 'docs/sio/nextcloud/installation'

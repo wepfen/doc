@@ -2,4 +2,4 @@
 
 # Documentation
 
-Dépôt servant à afficher mes documentations sur [readthedocs](https://tyron-docs.readthedocs.io/fr/latest/)
+Dépôt servant à afficher mes documentations sur [readthedocs](https://tyron-docs.readthedocs.io/fr/latest/index.html)

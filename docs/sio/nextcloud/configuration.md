@@ -43,6 +43,16 @@ a2enmod mime
 systemctl enable apache.service --now      #en root
 ```
 
+Enfin le serveur peut êter accessible à partir de ceraines adresses seulement renseignée dans `/srv/www/htdocs/nextcloud/config/config.php` comme suit
+```
+'trusted_domains' =>
+  array (
+   0 => 'localhost',
+   1 => 'server1.example.com',
+   2 => 'X.X.X.X',
+),
+```
+
 ## PHP 
 
 * Il faut modifier certaines valeurs de php.ini pour nextcloud 
@@ -77,12 +87,3 @@ sur debian: `chown -R www-data:www-data /var/www/html/nextcloud/`
     * Saisir les informations pour la base de donnée
 ![interface nextcloud.](https://raw.githubusercontent.com/1Tyron140/doc/main/images/nextcloud/web-2.jpg)
 
-Enfin le serveur peut êter accessible à partir de ceraines adresses seulement renseignée dans `/srv/www/htdocs/nextcloud/config/config.php` comme suit
-```
-'trusted_domains' =>
-  array (
-   0 => 'localhost',
-   1 => 'server1.example.com',
-   2 => 'X.X.X.X',
-),
-```

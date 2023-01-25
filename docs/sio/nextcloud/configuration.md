@@ -5,8 +5,7 @@
 ```
 systemctl enable mariadb.service --now      #en root
 ```
-
-   * --now pour activer le service, sinon il aurait fallu ajouter `systemctl start mariadb.service`
+* --now pour activer le service, sinon il aurait fallu ajouter `systemctl start mariadb.service`
 
 * __Et lancer l'installation sécurisée__ :
 ```

@@ -72,7 +72,7 @@ sur debian: `chown -R www-data:www-data /var/www/html/nextcloud/`
 ![interface nextcloud.](https://raw.githubusercontent.com/1Tyron140/doc/main/images/nextcloud/web-1.jpg)
 
 * __Saisir les informations__
-    * Chosir les logins amin pour next cloud
+    * Chosir les logins admin pour next cloud
     * Choisir la base mariaDB
     * Saisir les informations pour la base de donnée
 ![interface nextcloud.](https://raw.githubusercontent.com/1Tyron140/doc/main/images/nextcloud/web-2.jpg)

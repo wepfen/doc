@@ -8,5 +8,6 @@
 
 ## Spécifications
 
+* Nas synology DS218
 * Disque HDD 4TB
 * Disque HDD 2TB

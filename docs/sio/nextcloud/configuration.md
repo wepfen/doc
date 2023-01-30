@@ -1,7 +1,7 @@
 # Configuration
 ## MariaDB
 
-* __S'il s'agit de la première  connecion à la base de donnée, il faudra activer mariadb au démarrage :__
+* __S'il s'agit de la première  connexion à la base de donnée, il faudra activer mariadb au démarrage :__
 ```
 systemctl enable mariadb.service --now      #en root
 ```

@@ -25,9 +25,9 @@ nav:
     - Home: 'index.md'
     - SIO:
         - Nextcloud: 
-            Introduction: 'sio/nextcloud/introduction.md'
-            Installation: 'sio/nextcloud/installation.md'
-            Confiuration: 'sio/nextcloud/configuration.md'
+            - Introduction: 'sio/nextcloud/introduction.md'
+            - Installation: 'sio/nextcloud/installation.md'
+            - Configuration: 'sio/nextcloud/configuration.md'
         - pFsense: 
             - Introduction: 'sio/pfsense/index.md'
         - GLPI: 

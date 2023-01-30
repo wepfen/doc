@@ -42,7 +42,7 @@ a2enmod mime
 systemctl enable apache.service --now      #en root
 ```
 
-Enfin le serveur peut êter accessible à partir de ceraines adresses seulement renseignée dans `/srv/www/htdocs/nextcloud/config/config.php` comme suit
+Enfin le serveur peut être accessible à partir de ceraines adresses seulement renseignées dans `/srv/www/htdocs/nextcloud/config/config.php` comme suit
 ```
 'trusted_domains' =>
   array (

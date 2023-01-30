@@ -1,6 +1,11 @@
+# Présentation
+
+Ce projet a été réalisé en milieu professionnel. Le but est d'installer Nextcloud en interne afin d'avoir une solution de stockage de fichier servant aussi d'espace de travail pour le service.
+<br><br>
+
 # Introduction
  
-Nextcloud est un logiciel de stockage en réseau. Cette solution est intéressante car on peut tout gérer en interne sur notre propre infrastructure contrairement à google drive, par exemple, où nos données sont entre les mains de quelqu'un d'autre. Dans ce document je vais vous montrer l'installation sur une machine linux **openSUSE 15.3**.
+Nextcloud est un logiciel de stockage en réseau. Cette solution est intéressante car on peut tout gérer en interne sur notre propre infrastructure contrairement à google drive, par exemple, où nos données sont gérée par quelqu'un d'autre. Dans ce document je vais vous montrer l'installation sur une machine linux **openSUSE 15.3**.
 
 <br><br>
 ## Prérequis

@@ -1,12 +1,9 @@
 site_name: Docs | Bagne Tyron-Jean
-site_url: https://tyron-docs.readthedocs.io/
+#site_url: 
 use_directory_urls: false
 docs_dir: 'docs'
 repo_url: 'https://github.com/1Tyron140/doc'
 
-formats:
-  - pdf
-  
 theme:
   name: material
   highlightjs: true  
@@ -24,7 +21,6 @@ markdown_extensions:
   - pymdownx.superfences
   
 
-
 nav:
     - Home: 'index.md'
     - SIO:
@@ -32,5 +28,15 @@ nav:
             Introduction: 'sio/nextcloud/introduction.md'
             Installation: 'sio/nextcloud/installation.md'
             Confiuration: 'sio/nextcloud/configuration.md'
-        - pFsense: 'sio/pfsense/index.md'
-        - GLPI: 'sio/glpi/index.md'
+        - pFsense: 
+            - Introduction: 'sio/pfsense/index.md'
+        - GLPI: 
+            - Introduction: 'sio/glpi/index.md'
+        - Cacti: 
+            - Introduction: 'sio/cacti/index.md'   
+        - Samba: 
+            - Introduction: 'sio/samba/index.md'
+        - Nagios: 
+            - Introduction: 'sio/nagios/index.md'
+        - NAS: 
+            - Introduction: 'sio/synology/index.md'

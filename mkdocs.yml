@@ -22,8 +22,9 @@ markdown_extensions:
   
 
 nav:
-    - Home: 'index.md'
+    - Accueil: 'index.md'
     - SIO:
+        - Objectif: 'sio/index.md'
         - Nextcloud: 
             - Introduction: 'sio/nextcloud/introduction.md'
             - Installation: 'sio/nextcloud/installation.md'

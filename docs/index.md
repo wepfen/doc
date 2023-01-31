@@ -1,13 +1,5 @@
-# BTS SIO
+[![Documentation Status](https://readthedocs.org/projects/tyron-docs/badge/?version=latest)](https://tyron-docs.readthedocs.io/fr/latest/?badge=latest)
 
-Ce dossier sert à organiser mes documentations de projets réalisés durant mon BTS SIO.
-Les documentations mises à disposition peuvent être utilisées sans problème par tous.
+Bienvenue sur ma page de documentation où j'afficherai les docuementations de mes projets et autre.
 
-
-
-
-
-
-
-
-
+Le contenu peut être retouvé sur Github et utilisé librement.

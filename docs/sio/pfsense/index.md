@@ -14,3 +14,16 @@ Je détaillerais dans cette section la documentation du projet.
 * Au moins 15GO stockage
 * au moins 2GB RAM (dépend de l'utilisation)
 * Au moins 3 interfaces réseau (WAN, LAN, DMZ)
+
+## Objectifs
+
+Voici le résumé du cahier des charges:
+
+* Le serveur web est accessible depuis l’extérieur du réseau local
+* Le réseau local non accessible depuis l’extérieur
+* Le serveur web accessible depuis le réseau local
+* Internet est accessible depuis le réseau local
+
+![Diagramme d'utilisation](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_utilisation.png "Diagramme d'utilisation")
+
+(insérer gantt réel)

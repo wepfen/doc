@@ -28,7 +28,7 @@ mysql_secure_install        #en root
     * Les login, mot de passe et nom de base de donnée peuvent être définis comme bo vous semble.
     
 ## Apache
-* Activation de modules complémentaires
+### Activation de modules complémentaires
 ```
 a2enmod php7
 a2enmod rewrite
@@ -37,18 +37,28 @@ a2enmod env
 a2enmod dir
 a2enmod mime
 ```
-* Activation du service web:
+### Activation du service web:
 ```
 systemctl enable apache.service --now      #en root
 ```
+### Changement de repertoire racine (facultatif)
 
-Enfin le serveur peut être accessible à partir de ceraines adresses seulement renseignées dans `/srv/www/htdocs/nextcloud/config/config.php` comme suit
+Grâce aux changements suivants, en tapant  `http://<adresse serveur>/` on tombera directement sur `http://<adresse serveur>/nextcloud` ce ne pas avoir à taper toutes l'adresse. C'est interessant à mettre en place s'il n'y a que nextcloud comme applications web sur le serveur.
+
+En root dans le fichier `/etc/apache2/default-server-conf` ou `/etc/apache2/sites-available/000-default.conf` selon les OS,
+* Remplacer `DocumentRoot "/srv/www/htdocs"` par `DocumentRoot "/srv/www/htdocs/nextcloud"`
+* Rempalcer `<Directory "/srv/www/htdocs">` par `<Directory "/srv/www/htdocs/nextcloud">`
+* Redémarrer apache `sudo systemctl restart apache2`
+
+
+### Ajouts d'adresses accesibles
+Enfin le serveur peut être accessible à partir de ceraines adresses seulement renseignées dans `/srv/www/htdocs/nextcloud/config/config.php` comme suit:
 ```
 'trusted_domains' =>
   array (
    0 => 'localhost',
    1 => 'server1.example.com',
-   2 => 'X.X.X.X',
+   2 => '<ip du serveur>',
 ),
 ```
 
@@ -84,5 +94,6 @@ sur debian: `chown -R www-data:www-data /var/www/html/nextcloud/`
     * Chosir les logins admin pour next cloud
     * Choisir la base mariaDB
     * Saisir les informations pour la base de donnée
+    * Cliquer sur installer
 ![interface nextcloud.](https://raw.githubusercontent.com/1Tyron140/doc/main/images/nextcloud/web-2.jpg)
 

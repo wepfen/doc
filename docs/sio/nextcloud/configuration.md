@@ -81,6 +81,7 @@ Cependant il est possible d'ajuster les valeurs à votre uilisation et par exemp
 
 ## Nextcloud
 
+### Connecter la base de donnée
 * __Désigner l'utilisateur wwwrun en tant que propriétaire du repertoire nextcloud (en root) :__
 ```
 chown -R wwwrun:wwwrun /srv/www/htdocs/nextcloud/

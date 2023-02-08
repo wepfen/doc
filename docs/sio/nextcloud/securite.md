@@ -82,18 +82,56 @@ Après quelques tentatives échouées, les logs de fail2ban montrent que les fil
 
 ![image log fail2ban](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/fail2ban_log.jpg)
 
-## Utiliser HTTPS
+## Utiliser HTTPS (auto-signé)
 
-Pour ne pas que les mots de passes circulent en clair, je vais rediriger les requêtes HTTP en HTTPS.
+Pour ne pas que les mots de passe ou autres informations circulent en clair, je vais activer le protocole HTTPS àl'aide de certificat auto-signés. Il n'y a pas de soucis puisque le serveur est en local.
 
+Le site esten local alors je ne pourrais pas utiliser certbot.
 
-`sudo nano /etc/apache2/conf.d/nextcloud.conf`
+Pour cela j'aurais besoin de openssl (devrait déjà être installé) et de l'accès root.
+
+`zypper install openssl `
+
+### Création des certificats
+
+`openssl req -newkey rsa:4096 -x509 -days 365 -nodes -keyout /etc/apache2/ssl.key/macle.key -out /etc/apache/ssl.crt/moncert.crt`
+
+Saisir les informations souhaitées ensuite, exemple:
+```
+Country Name (2 letter code) [US]:FR
+State or Province Name (full name) [Some-State]:
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:
+Organizational Unit Name (eg, section) []:
+Common Name (e.g. server FQDN or YOUR name) []:localhost
+Email Address []:
+```
+
+### Activation des modules nécessaires
 
 ```
-<VirtualHost *:80>
-   ServerName cloud.nextcloud.com
-   Redirect permanent / https://cloud.nextcloud.com/
-</VirtualHost>
+a2enmod ssl
+a2enmod socache_shmcb
 ```
-Puis, redémmarer le serveur web:
-`sudo systemctl restart apache2.service`
+
+Et redémarrer le service apache2
+
+### Activation de SSL/TLS
+
+* Aller dans `/etc/apache2/vhosts.d`
+* Copier `vhost-ssl.template` vers `vhost-ssl-nextcloud.conf`
+* Mettre le bon chemin racine après DocumentRoot: `/srv/www/htdocs/nextcloud`
+* Mettre le nom du site après ServerName: `localhost`
+* Mettre le bon chemin du certificat `SSLCertificateFile /etc/apache2/ssl.key/<votre certificat>`
+* Mettre le bon chemin de la clé `SSLCertificateKeyFile /etc/apache/ssl.crt/<votre clé>`
+* Ouvrir `/etc/sysconfig/apache2` et chercher `APACHE_SERVER_FLAGS=""`, y ajouter SSL dans les guillemets
+* Sauvegarder et redémarrer le service apache2
+
+
+Sur `https//127.0.0.1`, la connexion est "non sécurisée" car c'est moi-même qui la signé et non une autorité de certification, mais la page et en https.
+![image https nextcloud](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/nextcloud_https_1.jpg)
+
+Le protocole TLS est activé:
+![image https nextcloud](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/page_chiffree.jpg)
+
+

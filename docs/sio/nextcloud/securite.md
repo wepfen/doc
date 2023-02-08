@@ -86,7 +86,7 @@ Après quelques tentatives échouées, les logs de fail2ban montrent que les fil
 
 Pour ne pas que les mots de passe ou autres informations circulent en clair, je vais activer le protocole HTTPS àl'aide de certificat auto-signés. Il n'y a pas de soucis puisque le serveur est en local.
 
-Le site esten local alors je ne pourrais pas utiliser certbot.
+Le site est en local alors je ne pourrais pas utiliser certbot.
 
 Pour cela j'aurais besoin de openssl (devrait déjà être installé) et de l'accès root.
 
@@ -134,4 +134,43 @@ Sur `https//127.0.0.1`, la connexion est "non sécurisée" car c'est moi-même q
 Le protocole TLS est activé:
 ![image https nextcloud](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/page_chiffree.jpg)
 
+### Redirection http vers https
 
+Dans le fichier /etc/apache2/conf.d/nextcloud.conf, ajouter:
+```
+<VirtualHost *:80>
+   ServerName cloud.nextcloud.com
+   Redirect permanent / https://cloud.nextcloud.com/
+</VirtualHost>
+```
+
+## Gestion des droits
+
+Dans nextcloud on peut modifier les droits des fichiers et des dossiers pour assurer la confidentialité.
+On va créer un dossier "maintenance", et le rendre accessible uniquement aux personnes concernées grâce aux habilitatiions.
+
+Sur le compte admin, on peut créer des utilisateurs et des groupes.
+
+* Aller dans le menu d'administration des utilisateurs
+
+![menu](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/menu_users.png)
+
+* Créer un groupe en cliquant sur "ajouter un groupe"
+
+![menu](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/creer_groupe.png)
+
+* Créer un dossier dans l'accueil
+
+![menu](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/nvo_dossier.png)
+
+* Ajouter le groupe "Maintenance" à la liste de droits en cliquant sur le logo partage
+
+![menu](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/partage_groupe.png)
+
+* Voici la liste de droits
+
+![menu](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/droits.png)
+
+* Ajouter des utilisateur au groupe Maintenance, valider
+
+![menu](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/ajout_user_groupe.png)

@@ -46,8 +46,11 @@ systemctl enable apache.service --now      #en root
 Grâce aux changements suivants, en tapant  `http://<adresse serveur>/` on tombera directement sur `http://<adresse serveur>/nextcloud` ce ne pas avoir à taper toutes l'adresse. C'est interessant à mettre en place s'il n'y a que nextcloud comme applications web sur le serveur.
 
 En root dans le fichier `/etc/apache2/default-server-conf` ou `/etc/apache2/sites-available/000-default.conf` selon les OS,
+
 * Remplacer `DocumentRoot "/srv/www/htdocs"` par `DocumentRoot "/srv/www/htdocs/nextcloud"`
+
 * Rempalcer `<Directory "/srv/www/htdocs">` par `<Directory "/srv/www/htdocs/nextcloud">`
+
 * Redémarrer apache `sudo systemctl restart apache2`
 
 

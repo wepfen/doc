@@ -1,0 +1,11 @@
+# fichier de conf jail fail2ban
+[nextcloud]
+backend = auto
+enabled = true
+port = 80,443
+protocol = tcp
+filter = nextcloud
+maxretry = 5
+bantime = 86400
+findtime = 43200
+logpath = /srv/www/htdocs/nextcloud/data/nextcloud.log

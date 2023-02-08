@@ -1,4 +1,4 @@
-# fichier de conf jail fail2ban
+# fichier de config jail fail2ban
 [nextcloud]
 backend = auto
 enabled = true

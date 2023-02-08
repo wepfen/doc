@@ -257,6 +257,3 @@ APACHE_SERVERTOKENS="ProductOnly"
 # some performance!
 #
 APACHE_EXTENDED_STATUS="off"
-
-
-

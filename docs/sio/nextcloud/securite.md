@@ -139,8 +139,8 @@ Le protocole TLS est activé:
 Dans le fichier /etc/apache2/conf.d/nextcloud.conf, ajouter:
 ```
 <VirtualHost *:80>
-   ServerName cloud.nextcloud.com
-   Redirect permanent / https://cloud.nextcloud.com/
+   ServerName localhost
+   Redirect permanent / https://localhost
 </VirtualHost>
 ```
 

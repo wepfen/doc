@@ -238,7 +238,7 @@ Dans le repertoire nextcloud:
 
 La mise à jour a abouti
 
-!menus après maj](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/menu_apres_maj.png)
+![menus après maj](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/menu_apres_maj.png)
 
 Tout est de comme avant
 

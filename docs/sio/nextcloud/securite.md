@@ -184,9 +184,9 @@ On passe le serveur en mode maintenance
 
 `sudo systemctl stop apache`
 
-* Copie des répertoires /config et /data
+* Copie des répertoires /config et /data (facultatif)
 
-* On peut les sauvegarder où l'on veut, personnellement j'ai crée un répertoire /srv/backup/nextcloud/:
+    * On peut les sauvegarder où l'on veut, personnellement j'ai crée un répertoire /srv/backup/nextcloud/:
 
 `sudo cp -r /srv/www/htdocs/nextcloud/data data`
 

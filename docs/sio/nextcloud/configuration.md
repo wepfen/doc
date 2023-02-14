@@ -80,6 +80,8 @@ session.gc_maxlifetime = 3600
 memory_limit = 512M
 ```
 
+* Faire les mêmes modifs dans /etc/php7/cli/php.ini
+
 Cependant il est possible d'ajuster les valeurs à votre uilisation et par exemple réduire `upload_max_filesize` à 10Go pour limiter le taille max d'upload d'un fichier.
 
 ## Nextcloud

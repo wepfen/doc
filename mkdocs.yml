@@ -32,7 +32,7 @@ nav:
             - Sécurité: 'sio/nextcloud/securite.md'
         - pFsense: 
             - Introduction: 'sio/pfsense/index.md'
-            - Installation: 'sio/pfsense/installation.md'
+            - Installation: 'sio/pfsense/installation.md' 
         - GLPI: 
             - Introduction: 'sio/glpi/index.md'
         - Cacti: 

@@ -240,7 +240,7 @@ La mise à jour a abouti
 
 ![menus après maj](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/menu_apres_maj.png)
 
-Tout est de comme avant
+Tout est comme avant
 
 * On peut maintenant supprimer le zip, le repertoire old-nextcloud, sortur du mode maintenance et répeter la procédure jusqu'à la version souhaitée !
 

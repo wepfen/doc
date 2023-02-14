@@ -143,6 +143,102 @@ Dans le fichier /etc/apache2/conf.d/nextcloud.conf, ajouter:
    Redirect permanent / https://localhost
 </VirtualHost>
 ```
+## Mise à jour de nextcloud
+
+### Erreur de mise à jour
+Lors de l'accès à la page nextcloud, il est proposé de mettre à jour le serveur.
+
+
+![page de mise à jour](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/demarrer_maj.png)
+
+On clique sur démarrer
+
+![erreur de mise à jour auto](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/erreur_maj_skip_version.png)
+
+Une erreur se produit.
+
+Le serveur est en version 21.x.y et il est indiqué qu'il passera en version 23.0.5. Une version a donc été sautée ce qui provoque des erreurs.
+
+D'après la [documentation](https://docs.nextcloud.com/server/latest/admin_manual/maintenance/upgrade.html#:~:text=You%20cannot%20skip,18.0.11%20%2D%3E%2019.0.5%20%2D%3E%2020.0.2):
+
+```
+* Vous ne pouvez pas sauter des versions majeures. Veuillez réexécuter la mise à niveau jusqu'à ce que vous ayez atteint la dernière version disponible (ou applicable)..
+
+* Exemple: 18.0.5 -> 18.0.11 -> 19.0.5 -> 20.0.2
+```
+
+En ouvrant le ficier `config.php`: `sudo nano /srv/www/htdocs/nextcloud/config/config.php`
+Je lis que nextcloud est en version 21.0.9.1, la lus récente de la version 21. Alors on peut passer à la suivante, soit la 22.2.10. 
+
+### Mise à jour manuelle
+
+On passe le serveur en mode maintenance
+
+ (en root): `sudo -u wwwrun php /srv/www/htdocs/nextcloud/occ maintenance:mode --on`
+
+>Si la commande 'php' est introuvable
+>
+>Installer le paquet php-cli
+
+* On arrête le serveur web
+
+`sudo systemctl stop apache`
+
+* Copie des répertoires /config et /data
+
+* On peut les sauvegarder où l'on veut, personnellement j'ai crée un répertoire /srv/backup/nextcloud/:
+
+`sudo cp -r /srv/www/htdocs/nextcloud/data data`
+
+`sudo cp -r /srv/www/htdocs/nextcloud/config config`
+
+* Renommer le repertoire nextcloud actuel en /old-nextcloud
+
+`sudo mv /srv/www/htdocs/nextcloud /srv/www/htdocs/old-nextcloud`
+
+* Télécharger l'archive de la version 22.2.10
+
+    * En téléchargant directement sur [la page nextcloud changelog](https://download.nextcloud.com/server/releases/nextcloud-22.2.10.zip)
+    * Avec wget : `sudo wget https://download.nextcloud.com/server/releases/nextcloud-22.2.10.zip`
+
+* Déplacer l'archive dans le repertoire nextcloud
+
+`sudo mv /chemin/vers/nextcloud-22.2.10.zip /srv/www/htdocs/nextcloud-22.2.10.zip`
+
+* Décompresser 
+
+`sudo unzip nextcloud-22.2.10.zip`
+
+*  Copie des repertoires config et data vers le nouveau repertoier nextcloud
+`sudo unalias cp` permet de retirer les alias de cp comme "cp -i" qui demande une confirmation pour chaque fichier, cela peut être remis ensuite
+
+`sudo cp -r /srv/www/htdocs/old-nextcloud/config/ /srv/www/htdocs/nextcloud/ `
+
+`sudo cp -r /srv/www/htdocs/old-nextcloud/data/ /srv/www/htdocs/nextcloud/ `
+
+* Mettre le compte web en propriétaire 
+
+` sudo chown -R wwwrun:wwwrun /srv/www/htdocs/nextcloud/`
+
+* Changer les droits 
+    * Sur les repertoires `sudo find nextcloud/ -type d -exec chmod 750 {} \;`
+    * Sur les fichiers `sudo find nextcloud/ -type f -exec chmod 640 {} \;`
+    
+> La commande (en root) `sudo -u wwwrun php /srv/www/htdocs/nextcloud/occ -V` nous renvoie la version"22.2.10"
+
+* Redémarrer le serveur apache
+
+* Mise à niveau
+
+Dans le repertoire nextcloud:
+
+`sudo -u wwwrun php occ upgrade`
+
+![Nouvelle maj installée](https://github.com/1Tyron140/doc/raw/main/images/nextcloud/maj_faite.png)
+
+La mise à jour a abouti
+
+* On peut maintenant surpprimer le zip, le repertoire old-nextcloud et répeter la procédure jusqu'à la version souhaitée !
 
 ## Gestion des droits
 

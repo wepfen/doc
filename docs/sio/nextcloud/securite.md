@@ -242,7 +242,7 @@ La mise à jour a abouti
 
 Tout est comme avant
 
-* On peut maintenant supprimer le zip, le repertoire old-nextcloud, sortur du mode maintenance et répeter la procédure jusqu'à la version souhaitée !
+* On peut maintenant supprimer le zip, le repertoire old-nextcloud, sortir du mode maintenance et répeter la procédure jusqu'à la version souhaitée !
 
 
 ## Gestion des droits

@@ -218,7 +218,7 @@ On passe le serveur en mode maintenance
 
 * Mettre le compte web en propriétaire 
 
-` sudo chown -R wwwrun:wwwrun /srv/www/htdocs/nextcloud/`
+` sudo chown -R wwwrun:www /srv/www/htdocs/nextcloud/`
 
 * Changer les droits 
     * Sur les repertoires `sudo find nextcloud/ -type d -exec chmod 750 {} \;`
@@ -244,6 +244,9 @@ Tout est comme avant
 
 * On peut maintenant supprimer le zip, le repertoire old-nextcloud, sortir du mode maintenance et répeter la procédure jusqu'à la version souhaitée !
 
+>Note pour moi même
+>
+> Mise à jour faite en 07:18.82
 
 ## Gestion des droits
 

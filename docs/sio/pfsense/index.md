@@ -29,7 +29,7 @@ Voici le résumé du cahier des charges:
 ![Diagramme de déploiement](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_deploiement.png "Diagramme de déploiement, schéma des flux")
 
 * Diagramme d'utilisation
-*
+
 ![Diagramme d'utilisation](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_utilisation.png "Diagramme d'utilisation")
 
 (insérer gantt réel)

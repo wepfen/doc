@@ -26,7 +26,7 @@ Voici le résumé du cahier des charges:
 
 * Schémas des flux de connexion  (diagramme de déploiement)
 
-![Diagramme de déploiement](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_utilisation.png "Diagramme de déploiement, schéma des flux")
+![Diagramme de déploiement](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_deploiement.png "Diagramme de déploiement, schéma des flux")
 
 * Diagramme d'utilisation
 ![Diagramme d'utilisation](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_utilisation.png "Diagramme d'utilisation")

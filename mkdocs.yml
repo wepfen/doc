@@ -27,12 +27,12 @@ nav:
         - Objectif: 'sio/index.md'
         - Nextcloud: 
             - Introduction: 'sio/nextcloud/introduction.md'
-            - Installation: 'sio/nextcloud/installation.md'
+            - Installation de Nextcoud: 'sio/nextcloud/installation.md'
             - Configuration: 'sio/nextcloud/configuration.md'
             - Sécurité: 'sio/nextcloud/securite.md'
         - pFsense: 
             - Introduction: 'sio/pfsense/index.md'
-            - Installation: 'sio/pfsense/installation.md' 
+            - Installation de pFsense: 'sio/pfsense/installation.md' 
         - GLPI: 
             - Introduction: 'sio/glpi/index.md'
         - Cacti: 
@@ -46,11 +46,11 @@ nav:
         - FTP:
             - openSUSE:
                 - Introduction: 'sio/ftp/openSUSE/introduction.md'
-                - Installation: 'sio/ftp/openSUSE/installation.md'
+                - Installer un FTP sur openSUSE: 'sio/ftp/openSUSE/installation.md'
                 - Configuration: 'sio/ftp/openSUSE/configuration.md'
                 - Sécurité: 'sio/ftp/openSUSE/securite.md'
         - SFTP:
             - openSUSE:
                 - Introduction: 'sio/sftp/openSUSE/introduction.md'
-                - Installation: 'sio/sftp/openSUSE/installation.md'
+                - Installer un SFTP sur openSUSE: 'sio/sftp/openSUSE/installation.md'
                 - Configuration: 'sio/sftp/openSUSE/configuration.md'

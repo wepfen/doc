@@ -43,3 +43,14 @@ nav:
             - Introduction: 'sio/nagios/index.md'
         - NAS: 
             - Introduction: 'sio/synology/index.md'
+        - FTP:
+            - openSUSE:
+                - Introduction: 'sio/ftp/openSUSE/introduction.md'
+                - Installation: 'sio/ftp/openSUSE/installation.md'
+                - Configuration: 'sio/ftp/openSUSE/configuration.md'
+                - Sécurité: 'sio/ftp/openSUSE/securite.md'
+        - SFTP:
+            - openSUSE:
+                - Introduction: 'sio/sftp/openSUSE/introduction.md'
+                - Installation: 'sio/sftp/openSUSE/installation.md'
+                - Configuration: 'sio/sftp/openSUSE/configuration.md'

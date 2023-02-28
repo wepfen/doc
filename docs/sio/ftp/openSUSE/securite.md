@@ -31,7 +31,7 @@ J'ai ajouté un fichier "test.txt" dans le nouveau répertoire racines choisi  `
 * (2) Mon répertoire de connexion est différent car c'est la racine `/`
 * (3) Je retrouve mon fichier test.txt que j'ai mis dans `/srv/ftp` donc le répertoire racine est ce dernier
 
-## Activer TLS
+## Passer en FTPS
 
 ### Création du certificat et de la clé
 
@@ -46,7 +46,7 @@ J'ai ajouté un fichier "test.txt" dans le nouveau répertoire racines choisi  `
 `chown root:ftp /etc/ssl/certs/ftpcert.crt`
 `chmod 640 /etc/ssl/certs/ftpcert.crt`
 
-### Autoriser TLS / Activer FTPS
+### Activer TLS
 
 * Ouvrir YAST
 

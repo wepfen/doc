@@ -30,3 +30,17 @@ J'ai ajouté un fichier "test.txt" dans le nouveau répertoire racines choisi  `
 * (1) Je me connecte sur mon compte "master"
 * (2) Mon répertoire de connexion est différent car c'est la racine `/`
 * (3) Je retrouve mon fichier test.txt que j'ai mis dans `/srv/ftp` donc le répertoire racine est ce dernier
+
+## Activer TLS
+
+### Création du certificat et de la clé
+
+`openssl req -x509 -newkey rsa:4096 -x509 -days 3650 -nodes -keyout /etc/ssl/private/ftpkey.key -out /etc/ssl/certs/ftpcert.crt -nodes -days 3650`
+* Autoriser la clé seulement à root
+
+`chmod 600 /etc/ssl/private/ftpkey.key`
+
+* Autoriser la lecture du certificat à l'utilisateur web
+
+`chown root:www /etc/ssl/certs/ftpcert.crt`
+`chmod 640 /etc/ssl/certs/ftpcert.crt`

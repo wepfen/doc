@@ -36,11 +36,38 @@ J'ai ajouté un fichier "test.txt" dans le nouveau répertoire racines choisi  `
 ### Création du certificat et de la clé
 
 `openssl req -x509 -newkey rsa:4096 -x509 -days 3650 -nodes -keyout /etc/ssl/private/ftpkey.key -out /etc/ssl/certs/ftpcert.crt -nodes -days 3650`
-* Autoriser la clé seulement à root
+* Autoriser la lecture clé à l'utilisateur ftp (il est dans le groupe ftp)
 
-`chmod 600 /etc/ssl/private/ftpkey.key`
+`chown root:ftp /etc/ssl/private/ftpkey.key`
+`chmod 640 /etc/ssl/private/ftpkey.key`
 
-* Autoriser la lecture du certificat à l'utilisateur web
+* Autoriser la lecture du certificat à l'utilisateur ftp
 
-`chown root:www /etc/ssl/certs/ftpcert.crt`
+`chown root:ftp /etc/ssl/certs/ftpcert.crt`
 `chmod 640 /etc/ssl/certs/ftpcert.crt`
+
+### Autoriser TLS / Activer FTPS
+
+* Ouvrir YAST
+
+* Serveur FTP
+
+* Paramètres pour les experts 
+
+* Autoriser SSL > autoriser TLS
+
+* Sélectionner le certificat crée précédemment
+
+![config tls sur yast](https://raw.githubusercontent.com/1Tyron140/doc/main/images/ftp/tls_ftp.png)
+
+* Ajouter la clé dans /etc/vsftpd.conf
+
+En dessous de rsa_cert_file, ajouter 
+
+`rsa_private_key_file=/etc/ssl/certs/ftpcert.crt`
+
+* Redémmarrer vsftpd*
+
+![config tls sur yast](https://raw.githubusercontent.com/1Tyron140/doc/main/images/ftp/filezilla_ftp_tls.png)
+
+* Maintenant lorsque je me connecte, je dois accepter le certificat

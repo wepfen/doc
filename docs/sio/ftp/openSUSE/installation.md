@@ -24,4 +24,4 @@ Il faut installer la fonctionnalité permettant de gérer le ftp avec Yast
 
 ![Menu yast ftp](https://github.com/1Tyron140/doc/raw/main/images/ftp/ftp_general_yast.png)
 
-L'interface graphique revient à éditer le fichier `/etc/vsftpd.conf`
+La configuration par interface graphique revient à éditer le fichier `/etc/vsftpd.conf`

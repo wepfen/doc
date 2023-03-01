@@ -31,3 +31,27 @@ Créer un site permet de sauvegarder les informations d'un serveur et les inform
 * Une fois fait, se connecter au site voulu
 
 ![](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/connexion_nvo_site.PNG)
+
+## Importer des fichiers du serrveur
+
+* Dans la partie site local, choisir le répertoire de destination en cliquant dessus 
+
+![](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/import_destination_filezilla.png)
+
+* Dans la partie site distant, faire clic droit sur le fichier à importer puis télécharger
+
+![](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/import_filezilla.png)
+
+Il apparait dans le répertoire choisi
+
+![](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/import_reussi.png)
+
+## Exporter des fichiers vers le serveur
+
+* Choisir le repertoire cible dans la partie de droite 
+
+* Dans la partie site local, clic droit sur le fichier puis envoyer
+
+Résultat: 
+
+![](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/export_reussi.png)

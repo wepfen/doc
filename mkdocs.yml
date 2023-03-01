@@ -55,4 +55,4 @@ nav:
                 - Installer un SFTP sur openSUSE: 'sio/sftp/openSUSE/installation.md'
                 - Configuration: 'sio/sftp/openSUSE/configuration.md'
                 - Sécurité: 'sio/sftp/openSUSE/securite.md'
-                - Guide de l'utilisateur: 'sio/sftp/openSUSE:guide_utilisateur.md'
+                - Guide de l'utilisateur: 'sio/sftp/openSUSE/guide_utilisateur.md'

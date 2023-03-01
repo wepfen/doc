@@ -29,6 +29,8 @@ en root,
 
 `chmod g+x /usr/bin/dumpcap`
 
+Si les changements ne s'appliquent pas, se déconnecter et se reconnecter
+
 ## Capture
 
 la capture va s'effectuer avec l'interface "any"

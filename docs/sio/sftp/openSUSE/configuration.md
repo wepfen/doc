@@ -51,7 +51,7 @@ Il est possible de remplacer /srv/ftp par /home/%u pour que chaque utilisateur a
 
 * Relancer le serveur à chaque changement de cnfiguration `systemctl restart sshd`
 
-## Test
+## Connexion
 
 Je vais tester la connexion au sftp 
 

@@ -19,7 +19,7 @@ zypper update -f
 
 * Sinon l'installer:
 
-`zyper install openssh-server`
+`zypper install openssh-server`
 
 * L'activer: 
 

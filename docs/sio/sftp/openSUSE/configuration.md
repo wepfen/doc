@@ -1,78 +1,108 @@
-# Configuration 
-en root ou avec sudo 
+## Capture avec wireshark 
+
+On va tester avec wireshark voir si la communication est chiffrée ou non
+
+### Installation
+
+`zypper install wireshark`
+
+* Lancer le programme en étant en root sinon les interfaces intéressantes seront indisponibles
+
+* Sans root
+
+![Wireshark sans privileges](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/wireshark_no_root.png "wireshark sans privilèges")
+
+* Avec root 
+
+![Wireshark avec privileges](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/wireshark_root.png "wireshark avec privilèges")
 
 
-## Groupes et utilisateurs
+#### Autoriser un utilisateur non-root à avoir toutes les interfaces
 
-* Créer un groupe pour les utilisateurs autorisés à ce connecter au SFTP:
+en root,
 
-    * En ligne de commande `groupadd sftpusers` 
-    * Avec Yast `Yast > Sécurité et utilisateurs > groupe > ajouter`
+* Ajouter l'utilisateur souhaité au groupe wireshark
 
-* Ajouter les utilisateurs à ce groupe:
+`usermod -aG wireshark user`
 
-    * En interface graphique avec yast `Yast > Sécurité et utilisateurs > groupe > sftpusers > cocher les users et valider"`
-    * En ligne de commande `usermod -aG user sftpusers`
+* S'assurer que le groupe wireshark puisse exécuter le binaire dumpcap, sinon faire:
 
-## SSH
+`chmod g+x /usr/bin/dumpcap`
 
-On aura besoin de modifier le fichier  `/etc/ssh/sshd_config`
+Si les changements ne s'appliquent pas, se déconnecter et se reconnecter
 
-* L'ouvrir: `nano /etc/ssh/sshd_config`
+### Capture
+
+la capture va s'effectuer avec l'interface "any"
+
+* Lancer la capture
+
+* Se connecter au SFTP 
+
+* Filtrer la capture par ssh en tapant "ssh" puis entrer dans la barre de filtre
+
+On peut voir que je me suis connecté au sftp avec Filezilla
+
+![Wireshark avec privileges](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/wireshark_filezilla.png "connecté avec filezilla")
+
+Et le contenu de ce paquet et de tous les autres est chiffré
+
+![paquet chiffré](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/contenu_chiffré.png "Le contenu est bien chiffré")
+
+## Gestion des habilitations 
+
+Il est possible de gérer les droits pour les différents dossiers et fichiers au sein du répertoire sftp.
+
+### Autoriser l'accès à un groupe
+
+En root
+
+On souhaaite par exemple autoriser l'accès au dossier RH seulement aux membres du groupe RH
+
+* Dans le répertoire racine du sftp, créer le dossier rh
+
+`mkdir rh`
+
+* Créer le groupe rh 
+
+`groupadd rh`
+
+* Mettre le groupe rh en propriétaire du dossier
+
+`chown root:rh rh/`
+
+* Accorder tous les droits au groupe rh et et les retirer aux autres utilisateurs
+
+`chmod 770 rh/`
+
+Je vais mettre le compte 'pcohen' dans le groupe rh et laisser les autres en dehors pour faire la démonstration.
+
+`uermod -aG rh pcohen`
+
+__Avec un compte dans le groupe rh__
+
+Le contenu du dossier a été affiché avec succès et l'utilisateur peut créer des fichiers et les lire
+
+![acces dossier rh](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/filezilla_acces_rh.png "Accès au dossier RH")
 
 
-### Répertoire racine
+__Avec un compte n'appartenant pas au groupe rh__
 
-* En fin de fichier, commenter la ligne `Subsystem  sftp    /usr/lib64/ssh/sftp-server` avec un '#' en début de ligne
 
-* Écrire juste en dessous `Subsystem sftp internal-sftp`, cela permet de faire fonctionner chroot permettant dfe choisir le répertoire racine.
+L'utilisateur ne peut pas accéder au dossier
 
-* Création du répertoire racine 
-```
-mkdir /srv/sftp
-chown root:sftpusers /srv/sftp
-chmod 750 /srv/sftp
-```
+![refus d'acces dossier rh](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/filezilla_acces_rh_refus.png "Refus d'accès au dossier RH")
 
-* Ajouter les règle suivantes dans  `sshd_config`, rajouter tout en bas du  fichier près de l'exemple
+### Autoriser l'accès à un utilisateur
 
-```
-Match group sftpusers
-   ForceCommand internal-sftp
-   ChrootDirectory /srv/sftp
-   X11Forwarding no
-   AllowTcpForwarding no
-```
-Il est possible de remplacer /srv/ftp par /home/%u pour que chaque utilisateur ait sa racine dans son répertoire personnel.
+* Créer un dossier dans /srv/sftp
 
-### Authentification 
+`mkdir pcohen`
 
-* Décommenter "PasswordAuthentication yes" à la ligne 57
+* Rendre l'utilisateur voulu propriétaire
 
-* Relancer le serveur à chaque changement de cnfiguration `systemctl restart sshd`
+`chown pcohen /srv/sftp/pcoohen`
 
-## Connexion
+* Accorder les droits seulement à l'utilisateur
 
-Je vais tester la connexion au sftp 
-
-### Par ligne de commande
-
-![sftp cli](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/sftp_cli.png)
-
-La connexion en sftp fonctionne d'où le shell "sftp>"
-
-### Avec FileZilla
-
-![sftp filezilla](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/sftp_filezilla.png "sftp filezilla")
-
-je me connecte comme pour un FTP mais j'entre le port 22. Ainsi je n'ai pas besoin de créer un certificat.
-
-Il m'est proposé par défaut.
-
-Et je retrouve mon fichier texte sans bouger de répertoire donc je suis dans mon répertoire racine /srv/sftp/
-
-![sftp filezilla 2](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/sftp_filezilla_2.png "sftp filezilla 2")
-
-Le répertoire racine est bien /srv/sftp avec mon fihier texte
-
- 
+`chmod 700 /sv/sftp/pcohen`

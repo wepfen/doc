@@ -32,7 +32,7 @@ Dans cette partie on va voir comment installer une machine virtuelle pfsense sur
 Pendant que le téléchargement mijote, on va préparer la VM
 
 
-### Paraétrage de la VM pFsense
+### Paramétrage de la VM pFsense
 
 * Sur la barre latérale, cliquer sur "Machines Virtuelles" puis créer
     * Nom: ce que vous voulez

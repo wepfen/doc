@@ -31,7 +31,7 @@ nav:
             - Configuration: 'sio/nextcloud/configuration.md'
             - Sécurité: 'sio/nextcloud/securite.md'
         - pFsense: 
-            - Introduction: 'sio/pfsense/index.md'
+            - Pare-feu pFsense virtuel sur ESXI: 'sio/pfsense/index.md'
             - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
         - GLPI: 
             - Introduction: 'sio/glpi/index.md'
@@ -56,3 +56,8 @@ nav:
                 - Configuration: 'sio/sftp/openSUSE/configuration.md'
                 - Sécurité: 'sio/sftp/openSUSE/securite.md'
                 - Guide de l'utilisateur: 'sio/sftp/openSUSE/guide_utilisateur.md'
+        - Zootickoon:
+            - Création du site web d'un zoo avec un CMS: 'sio/zootickoon/introduction.md'
+            - Installation de XAMPP et Wordpress: 'sio/zootickoon/installation.md'
+            - Configuration de la base de donnée et de wordpress: 'sio/zootickoon/configuration.md'
+#- Création du site web: 

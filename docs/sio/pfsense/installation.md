@@ -53,3 +53,30 @@ Le délai pour appuyer sur la touche est assez cours alors on va l'augmenter.
     * Forcer la configuration BIOS
     
 ![Option de démarrage](https://github.com/1Tyron140/doc/raw/main/images/pfsense/option_demarrage_042016.PNG)
+
+
+## Infrastructure
+
+>Ce sont les branchments APRES avoir préconfiguré le pare-feu car une fois branché de la sorte on ne pourra plus l'administrer par son interface par le wan car il n'y a pas de port où brancher un pc portable.
+
+* Chacune des interfaces réseau de l'hyperviseur est connecté au pFsense, la première servira à se brancher au routeur et les autres aux différents switch de sortes à transmettre le réseau.
+
+* Le routeur sera branché à l'interface du ESXi avec PFSENSE et ce dernier fera le routage vers les switches et différents sous réseaux.
+
+* Branchements sur le routeur
+
+![cisco 2900](https://github.com/1Tyron140/doc/raw/main/images/pfsense/cisco_2900.jpg)
+
+* Brachement sur l'hyperviseur ESXi
+
+![esxi branchement](https://github.com/1Tyron140/doc/raw/main/images/pfsense/arriere_esxi.jpg)
+
+>wan représente le routeur précédent
+
+Grâce à ces branchements le pare-feu même étant virtuel, en place devant le réseau à protéger
+Maintenant il faudra le configurer
+
+* ESXi branché au switch serveurs locaux qui redistribuera ainsi le réseau grâce au pFsense
+
+
+![switch](https://github.com/1Tyron140/doc/raw/main/images/pfsense/switch_serv.jpg)

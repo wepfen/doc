@@ -1,0 +1,145 @@
+
+Router#sh ru
+% Ambiguous command:  "sh ru"
+Router#show run
+Building configuration...
+
+Current configuration : 1873 bytes
+!
+! Last configuration change at 16:59:06 UTC Thu Mar 23 2023
+version 15.2
+service timestamps debug uptime
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging count
+logging buffered 16384
+no logging rate-limit
+no logging console
+!
+no aaa new-model
+!
+ip cef
+
+Router#show run
+Building configuration...
+
+Current configuration : 1873 bytes
+!
+! Last configuration change at 16:59:06 UTC Thu Mar 23 2023
+version 15.2
+service timestamps debug uptime
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname Router
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging count
+logging buffered 16384
+no logging rate-limit
+no logging console
+!
+no aaa new-model
+!
+ip cef
+!
+!
+!
+ip dhcp excluded-address 10.10.1.1 10.10.1.100
+ip dhcp excluded-address 10.10.1.253
+!
+ip dhcp pool lan
+ network 10.10.0.0 255.255.254.0
+ default-router 10.10.1.254
+ dns-server 8.8.8.8 8.8.4.4
+!
+!
+!
+no ipv6 cef
+multilink bundle-name authenticated
+!
+!
+!
+!
+license udi pid CISCO2901/K9 sn FCZ1933712B
+!
+!
+!
+!
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ ip address 172.22.101.199 255.255.0.0
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ ip address 10.0.0.1 255.255.255.248
+ ip nat inside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+ip default-gateway 172.22.100.1
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip nat log translations syslog
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+ip route 0.0.0.0 0.0.0.0 192.168.50.1
+ip route 0.0.0.0 0.0.0.0 172.22.100.1
+!
+logging trap debugging
+logging source-interface GigabitEthernet0/1
+logging host 10.10.1.100
+logging host 10.10.1.100 transport tcp port 1468
+logging host 10.10.0.6
+logging host 10.10.1.99
+logging host 192.168.50.3
+logging host 192.168.50.118
+logging host 10.10.1.254
+access-list 1 permit 10.10.0.0 0.0.1.255
+access-list 1 permit 10.0.0.0 0.0.0.7
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+!
+end

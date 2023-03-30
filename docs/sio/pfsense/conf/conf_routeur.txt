@@ -1,9 +1,4 @@
 
-Router#sh ru
-% Ambiguous command:  "sh ru"
-Router#show run
-Building configuration...
-
 Current configuration : 1873 bytes
 !
 ! Last configuration change at 16:59:06 UTC Thu Mar 23 2023

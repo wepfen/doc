@@ -1,6 +1,6 @@
 03/2023
 
-# Introduction
+# Création du site web d'un zoo avec un CMS
 
 Ce projet a été réalisé en cours de formation.
 Il s'agit de mettre en place le site web d'un zoo en installant la base de donnée, le serveur web et le CMS.

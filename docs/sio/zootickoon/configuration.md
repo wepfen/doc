@@ -1,4 +1,4 @@
-# Configuration
+# Configuration de la base de donnée et de wordpress
 
 ## Création de la base de donnée Wordpress
 

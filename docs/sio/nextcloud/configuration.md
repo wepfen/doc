@@ -1,4 +1,4 @@
-# Configuration
+# Configuration de Nextcloud
 ## MariaDB
 
 * __S'il s'agit de la première  connexion à la base de donnée, il faudra activer mariadb au démarrage :__

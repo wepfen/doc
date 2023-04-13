@@ -1,4 +1,4 @@
-# Installation
+# Installation de XAMPP et Wordpress
 
 Le CMS wordpress est accessible par interface web sur un navigateur web. Alors je dois commencer par installer XAMPP
 

@@ -26,10 +26,10 @@ nav:
     - SIO:
         - Objectif: 'sio/index.md'
         - Nextcloud: 
-            - Introduction: 'sio/nextcloud/introduction.md'
+            - Installation d'un serveur de cloud interne Nextcloud: 'sio/nextcloud/introduction.md'
             - Installation de Nextcoud: 'sio/nextcloud/installation.md'
-            - Configuration: 'sio/nextcloud/configuration.md'
-            - Sécurité: 'sio/nextcloud/securite.md'
+            - Configuration de Nextcloud: 'sio/nextcloud/configuration.md'
+            - La Sécurité sur Nextcloud: 'sio/nextcloud/securite.md'
         - pFsense: 
             - Pare-feu pFsense virtuel sur ESXI: 'sio/pfsense/index.md'
             - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
@@ -60,4 +60,4 @@ nav:
             - Création du site web d'un zoo avec un CMS: 'sio/zootickoon/introduction.md'
             - Installation de XAMPP et Wordpress: 'sio/zootickoon/installation.md'
             - Configuration de la base de donnée et de wordpress: 'sio/zootickoon/configuration.md'
-            - Création du site web: 'sio/zootickoon/conception.md'
+            - Conception du site web: 'sio/zootickoon/conception.md'

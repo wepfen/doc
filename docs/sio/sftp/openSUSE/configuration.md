@@ -92,17 +92,3 @@ __Avec un compte n'appartenant pas au groupe rh__
 L'utilisateur ne peut pas accéder au dossier
 
 ![refus d'acces dossier rh](https://raw.githubusercontent.com/1Tyron140/doc/main/images/sftp/filezilla_acces_rh_refus.png "Refus d'accès au dossier RH")
-
-### Autoriser l'accès à un utilisateur
-
-* Créer un dossier dans /srv/sftp
-
-`mkdir pcohen`
-
-* Rendre l'utilisateur voulu propriétaire
-
-`chown pcohen /srv/sftp/pcoohen`
-
-* Accorder les droits seulement à l'utilisateur
-
-`chmod 700 /sv/sftp/pcohen`

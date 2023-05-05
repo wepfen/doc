@@ -35,6 +35,7 @@ nav:
             - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
         - GLPI: 
             - Introduction: 'sio/glpi/index.md'
+            - Inventorier le parc Informatique avec FusionInventory: 'sio/glpi/fusion.md'
         - Cacti: 
             - Introduction: 'sio/cacti/index.md'   
         - Samba: 

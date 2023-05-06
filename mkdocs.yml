@@ -37,13 +37,18 @@ nav:
             - Introduction: 'sio/glpi/index.md'
             - Inventorier le parc Informatique avec FusionInventory: 'sio/glpi/fusion.md'
         - Cacti: 
-            - Introduction: 'sio/cacti/index.md'   
+            - Superviser une machine Windows avec Cacti: 'sio/cacti/ajouter_machine.md'   
+            - Modifier MariaDB: 'sio/cacti/modifier_mariadb.md'  
         - Samba: 
-            - Introduction: 'sio/samba/index.md'
+            - Installation de Samba sur un serveur linux: 'sio/samba/installation_samba.md'
         - Nagios: 
-            - Introduction: 'sio/nagios/index.md'
+            - Superviser une machine LInux sur Nagios: 'sio/nagios/nagios_ajouter-machine-linux.md'
+            - Superviser une machine Windows sur Nagios: 'sio/nagios/nagios_ajouter-machine-windows.md'
+            - Monitorer un service particulier sur Nagios: 'sio/nagios/monitorer_services.md'
+            - Problème "host down" sur Nagios: 'sio/nagios/nagios_host-down.md'
         - NAS: 
             - Introduction: 'sio/synology/index.md'
+
         - FTP:
             - openSUSE:
                 - Introduction: 'sio/ftp/openSUSE/introduction.md'

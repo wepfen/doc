@@ -42,8 +42,9 @@ nav:
         - Samba: 
             - Installation de Samba sur un serveur linux: 'sio/samba/installation_samba.md'
         - Nagios: 
-            - Superviser une machine LInux sur Nagios: 'sio/nagios/nagios_ajouter-machine-linux.md'
-            - Superviser une machine Windows sur Nagios: 'sio/nagios/nagios_ajouter-machine-windows.md'
+            - Installer Nagios sur Debian: 'sio/nagios/installation_nagios.md'
+            - Superviser une machine Linux sur Nagios: 'sio/nagios/nagios_ajouter-machine-linux.md'
+            - Superviser une machine Windows sur Nagios: 'sio/nagios/nagios_superviser_windows.md'
             - Monitorer un service particulier sur Nagios: 'sio/nagios/monitorer_services.md'
             - Problème "host down" sur Nagios: 'sio/nagios/nagios_host-down.md'
         - NAS: 

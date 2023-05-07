@@ -1,4 +1,3 @@
-11/2022
 
 # Superviser/Monitorer une machine Linux
 

@@ -56,6 +56,38 @@ Le délai pour appuyer sur la touche est assez cours alors on va l'augmenter.
     
 ![Option de démarrage](https://github.com/1Tyron140/doc/raw/main/images/pfsense/option_demarrage_042016.PNG)
 
+### Installation
+
+
+* Au démarrage le menu BIOS sera donc lancé
+* Dans la section `Boot`, faire passer `CD-ROM` en premier à l'aide de la touche "+"
+* Sauvegarder et quitter avec "F10"
+
+![Menu BIOS](https://github.com/1Tyron140/doc/raw/main/images/pfsense/ordre_boot_042017.PNG)
+
+* Lors de l'installation laisser les valeurs par défaut et poursuivre
+
+![Page welcome installation pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/pfsense_welcome.PNG)
+
+* Choisir le clavier français avec espace puis entrée (bien qu'il restera en QWERTY ensuite)
+
+![choix clavier pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/pfsense_keymap_selection.PNG)
+
+* Pour le disque j'ai choisi ZFS mais UFS (BIOS ou UEFI) fonctionne très bien aussi
+
+![pfsense partitionnement](https://github.com/1Tyron140/doc/raw/main/images/pfsense/zfs.PNG)
+
+![ZFS configuration pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/zfs_conf.PNG)
+
+* Choisir "non" pour la configuration manuelle sur shell
+
+![configuration manuelle pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/manual_configuration_pfsense.PNG)
+
+* faire entrée sur `Reboot` pour redémarrer et finaliser l'installation
+![installation complétée pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/pfsense_complete.PNG)
+
+Ensuite il va falloir configurer les interfaces réseau dans la [partie suivante](https://tyron-docs.readthedocs.io/fr/latest/sio/pfsense/configuration.html) 
+
 
 ## Infrastructure
 

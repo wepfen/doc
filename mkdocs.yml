@@ -34,7 +34,7 @@ nav:
             - Pare-feu pFsense virtuel sur ESXI: 'sio/pfsense/index.md'
             - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
         - GLPI: 
-            - Introduction: 'sio/glpi/index.md'
+            - Gérer le parc informatique avec GLPI: 'sio/glpi/index.md'
             - Inventorier le parc Informatique avec FusionInventory: 'sio/glpi/fusion.md'
         - Cacti: 
             - Superviser une machine Windows avec Cacti: 'sio/cacti/ajouter_machine.md'   
@@ -52,21 +52,21 @@ nav:
 
         - FTP:
             - openSUSE:
-                - Introduction: 'sio/ftp/openSUSE/introduction.md'
+                - Mise en place d'un serveur FTP sur openSUSE: 'sio/ftp/openSUSE/introduction.md'
                 - Installer un FTP sur openSUSE: 'sio/ftp/openSUSE/installation.md'
-                - Configuration: 'sio/ftp/openSUSE/configuration.md'
-                - Sécurité: 'sio/ftp/openSUSE/securite.md'
+                - Configuration du SFTP sur openSUSE: 'sio/ftp/openSUSE/configuration.md'
+                - Quelques mesures de sécurité: 'sio/ftp/openSUSE/securite.md'
         - SFTP:
             - openSUSE:
-                - SFTP sur openSUSE: 'sio/sftp/openSUSE/introduction.md'
+                - Mise en place d'un SFTP sur openSUSE: 'sio/sftp/openSUSE/introduction.md'
                 - Installer un SFTP sur openSUSE: 'sio/sftp/openSUSE/installation.md'
-                - Configuration: 'sio/sftp/openSUSE/configuration.md'
-                - Sécurité: 'sio/sftp/openSUSE/securite.md'
-                - Guide de l'utilisateur: 'sio/sftp/openSUSE/guide_utilisateur.md'
+                - Configuration du SFTP sur openSUSE: 'sio/sftp/openSUSE/configuration.md'
+                - Sécurité du SFTP: 'sio/sftp/openSUSE/securite.md'
+                - Guide de l'utilisateur du SFTP: 'sio/sftp/openSUSE/guide_utilisateur.md'
             - debian:
-                - SFTP sur Debian: 'sio\sftp\debian\introduction.md'
+                - Mise en place d'un SFTP sur Debian: 'sio\sftp\debian\introduction.md'
                 - Installation du SFTP sur Debian: 'sio\sftp\debian\installation.md'
-                - Configuration du SFTP: 'sio\sftp\debian\configuration.md'
+                - Configuration du SFTP sur Debian: 'sio\sftp\debian\configuration.md'
         - Zootickoon:
             - Création du site web d'un zoo avec un CMS: 'sio/zootickoon/introduction.md'
             - Installation de XAMPP et Wordpress: 'sio/zootickoon/installation.md'

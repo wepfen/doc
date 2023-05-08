@@ -1,5 +1,3 @@
-05/2023
-
 # Inventaire du parc informatique grâce à FusionInventory sur GLPI - Windows Server
 
 Ce projet est sous-jacent au projet GLPI.

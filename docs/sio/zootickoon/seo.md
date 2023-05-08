@@ -98,6 +98,14 @@ Openclassroom montre comment le faire dans ce [cours](https://openclassrooms.com
 
 Voici une [liste](https://blog.hubspot.fr/marketing/conseils-referencement-articles) plus complète.
 
+#### Wix
+
+Wix a sa propre [page](https://fr.wix.com/blog/seo-comment-bien-referencer-son-site-wix) pour le référencement SEO 
+
+#### Wordpress
+
+Wordpress est énormément utilisé pour le développement web et a une grande communauté avec un large choix de tutoriels pour le SEO notamment de [presse-citron](https://www.presse-citron.net/hebergeur/faq/seo-wordpress/)ou [Hostinger](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjxu8-mqeX-AhXjV6QEHTYZDnIQFnoECBgQAQ&url=https%3A%2F%2Fwww.hostinger.fr%2Ftutoriels%2Fconseils-seo-wordpress&usg=AOvVaw1BGt3GKoT0O0M3CbavLm2D)
+ 
 ## Conclusion
 
 Le SEO est un ensemble de pratique qui doivent être respectée pour bien optimiser le référencement.

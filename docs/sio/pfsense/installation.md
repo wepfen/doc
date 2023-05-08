@@ -84,6 +84,7 @@ Le délai pour appuyer sur la touche est assez cours alors on va l'augmenter.
 ![configuration manuelle pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/manual_configuration_pfsense.PNG)
 
 * faire entrée sur `Reboot` pour redémarrer et finaliser l'installation
+
 ![installation complétée pfsense](https://github.com/1Tyron140/doc/raw/main/images/pfsense/pfsense_complete.PNG)
 
 Ensuite il va falloir configurer les interfaces réseau dans la [partie suivante](https://tyron-docs.readthedocs.io/fr/latest/sio/pfsense/configuration.html) 

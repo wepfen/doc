@@ -51,17 +51,34 @@ Le délai pour appuyer sur la touche est assez cours alors on va l'augmenter.
 * VM > Option VM > Option de démarrage:
     * Délai de démarrage: 30000 ms
     * Forcer la configuration BIOS
+	
+* Ou alors "forcer l'entrée dans l'écran de configuration du bios au prochain démarrage"
     
 ![Option de démarrage](https://github.com/1Tyron140/doc/raw/main/images/pfsense/option_demarrage_042016.PNG)
 
 
 ## Infrastructure
 
->Ce sont les branchments APRES avoir préconfiguré le pare-feu car une fois branché de la sorte on ne pourra plus l'administrer par son interface par le wan car il n'y a pas de port où brancher un pc portable.
+### Le plan d'action
 
-* Chacune des interfaces réseau de l'hyperviseur est connecté au pFsense, la première servira à se brancher au routeur et les autres aux différents switch de sortes à transmettre le réseau.
+Le plan d'action décrit comment je fais fonctionner le routage pFsense dans un premier temps alors il est important de le comprendre.
 
-* Le routeur sera branché à l'interface du ESXi avec PFSENSE et ce dernier fera le routage vers les switches et différents sous réseaux.
+* L'idée est de configurer une machine virtuelle pFsense qui sera connectée à chaque interface réseau de l'ESXi dont une reservée pour le WAN ou seul le pFsense sera présent.
+* Le port WAN sera connecté au routeur vers l'internet par RJ45
+* Les autres ports (LAN, DMZ, SERVEURS) seront connectés par RJ45 vers leurs switches respectifs
+* Le routage vers ces switchs s'effectuera par pfsense
+* L'interface du routeur cisco (ou votre box) sera connecté avec pFsense par une IP statique choisie et vice-versa pour pFsense.
+* Du côté LAN, DMZ, SERVEURS, pFsense sera la passerelle pour ces sous-réseaux
+* Donc il faudra avant de brancher le pFsense au routeur, me brancher au switch ou st présent l'hyperviseur, m'y connecter et configurer l'interface vers internet sur pFsense.
+* Puis brancher 
+* Le pFsense est maintenant branché au routeur vers l'internet, je ne peux que me brancher au switches LAN, DMZ ou serveurs.
+* La l'ESXi n'a pas accès à internet car le pfsense n'effectue pas encore le routage donc l'hyperviseur ESXi aura une adresse link-local(169.254.0.0/16)
+* L'ESXi est branché à un écran donc je peux savoir l'ip après un petit temps
+* Je me configurer une IP statique link-local sur mon PC puis j'accède à l'ESXi et je configure le pFsense d'ici
+* Désormais je peux séléctionner une IP pour le pFsense sur chaque sous-réseaux, activer le DHCP, et mettre en place les règles pour accéder à internet.
+
+
+### Branchements
 
 * Branchements sur le routeur
 

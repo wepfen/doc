@@ -4,7 +4,7 @@
 
 ## Présentation
 
-Dans le cadre de l'épreuve E5 du BTS SIO j'ai installé un pare-feu pFsense virtuel sur l'hyperviseur ESXI. Le but était d'ouvrir une afin une DMZ.
+Dans le cadre de l'épreuve E5 du BTS SIO j'ai installé un pare-feu pFsense virtuel sur l'hyperviseur ESXI. Le but était d'ouvrir une DMZ.
 
 
 Je détaillerais dans cette section la documentation du projet.

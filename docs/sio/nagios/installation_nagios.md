@@ -7,4 +7,4 @@ Nagios est un outil de supervision permettant de surveiller ses serveurs, la cha
 
 [Page de téléchargement Nagios](https://www.nagios.org/downloads/nagios-core/)
 
-[Lien vers la documentation](https://github.com/1Tyron140/doc/blob/main/docs/sio/nagios/installation_nagios.pdf)
+[Lien vers la documentation](https://raw.githubusercontent.com/1Tyron140/doc/main/docs/sio/nagios/installation_nagios.pdf)

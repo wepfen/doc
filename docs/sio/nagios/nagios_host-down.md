@@ -4,4 +4,4 @@ Parfois, une machine supervisée est bien active mais elle retourne une reponse 
 Voici comment résoudre le problème
 
 
-[Lien vers la documentation](https://github.com/1Tyron140/doc/blob/main/docs/sio/nagios/nagios_host-down.pdf)
+[Lien vers la documentation](https://raw.githubusercontent.com/1Tyron140/doc/main/docs/sio/nagios/nagios_host-down.pdf)

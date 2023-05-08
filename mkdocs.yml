@@ -75,3 +75,7 @@ nav:
             - Configuration de la base de donnée et de wordpress: 'sio/zootickoon/configuration.md'
             - Conception du site web: 'sio/zootickoon/conception.md'
             - Améliorations du référencement (SEO): 'sio/zootickoon/seo.md'
+        - Cisco Packet Tracer:
+            - HSRP:
+                - Mise en place de HSRP sur packet tracer: 'sio/packet_tracer/hsrp/hsrp.md'
+                

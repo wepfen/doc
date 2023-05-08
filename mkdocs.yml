@@ -33,6 +33,7 @@ nav:
         - pFsense: 
             - Pare-feu pFsense virtuel sur ESXI: 'sio/pfsense/index.md'
             - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
+            - Configuration de pFsense: 'sio/pfsense/configuration.md' 
         - GLPI: 
             - Gérer le parc informatique avec GLPI: 'sio/glpi/index.md'
             - Inventorier le parc Informatique avec FusionInventory: 'sio/glpi/fusion.md'

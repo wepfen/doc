@@ -36,6 +36,7 @@ nav:
             - Configuration de pFsense: 'sio/pfsense/configuration.md' 
         - GLPI: 
             - Gérer le parc informatique avec GLPI: 'sio/glpi/index.md'
+            - Installation de GLPI: 'sio/glpi/installation_glpi.md'
             - Inventorier le parc Informatique avec FusionInventory: 'sio/glpi/fusion.md'
         - Cacti: 
             - Superviser une machine Windows avec Cacti: 'sio/cacti/ajouter_machine.md'   

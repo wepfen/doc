@@ -71,7 +71,7 @@ l'ordre des champs su l'image est le suivant: protocole, adresse source, port so
 
 
 
-HTTPS / HTTP
+#### HTTPS / HTTP
 
 * Sur la DMZ on va autoriser le trafic HTTPS/HTTP entrant
 * Sur le LAN, rien à faire puisqu'une règle autorisant à se connecter à un port HTTPS/HTTP a déjà été mise en place
@@ -80,5 +80,14 @@ HTTPS / HTTP
 
 ![regles DMZ entrant HTTPS](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_vers_dmz.PNG)
 
+* Je teste la connexion vers le serveur web de la DMZ
+
+![test connexion web vers DMZ]()https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/test_srv_web_dmz.PNG
+
+#### SFTP
+
+* Sur la DMZ autoriser les flux entrant sur le port 22
+
+![ssh entant DMZ](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_dmz_ssh_entrant.PNG)
 
 ### DMZ vers internet

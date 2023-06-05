@@ -32,8 +32,7 @@ nav:
             - La Sécurité sur Nextcloud: 'sio/nextcloud/securite.md'
         - pFsense: 
             - Pare-feu pFsense virtuel sur ESXI: 'sio/pfsense/index.md'
-            - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
-            - Configuration de pFsense: 'sio/pfsense/regles.md' 
+            - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md'
             - Création des règles de pare-feu sur pFsense: 'sio/pfsense/regles.md' 
             - Sauvegarde automatique avec AutoConfigBackup: 'sio/pfsense/autoconfigbackup.md'
         - GLPI: 

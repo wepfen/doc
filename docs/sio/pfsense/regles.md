@@ -15,3 +15,35 @@ Automatiquement, les flux en réponse à cette règle seront acceptés, c'est-à
 
 Plus d'informations sur le [fonctionnement de pFsense](https://docs.netgate.com/pfsense/en/latest/firewall/rule-methodology.html)
 
+## Création des règles 
+
+### Internet depuis le LAN
+
+#### HTTPS
+
+Pour montrer un exemple de confiuration des règles, je vais ajouter les rèles permettant de accéder aux sites internet.
+
+Pour cela il faudra autoriser le flux vers les ports 80 (HTTP), 443 (HTTPS), 53 (DNS) depuis le LAN.
+
+Sur pFsense **pare-feu > règles > LAN > Add**
+
+![règles https](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rule_https_lan.PNG)
+![règles https](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rule_https_lan_2.PNG)
+
+En résumé, j'**autorise** pour l'nterface **LAN**, en **IPV4** et sur **TCP**  le **trafic du LAN** vers partout (**any**) sur le port de destination **443 (HTTPS)** et j'active la journalisation pour cette règles.
+
+Donc en autorisant le trafic sortant vers HTTPS, la réponse à ce trafic sera autorisée alors qu'avant elles étaient refusée à cause de la politique **Default Deny**.
+
+Cependant internet n'est pas encore accessible car il faut aussi activer le DNS et eventuellement HTTP si l'on veut.
+
+#### DNS 
+
+Pour le flux DNS c'est le même principe, la règle en une ligne
+
+![règles http, https, dns](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_lan_http_dns.PNG)
+
+On peut désormais tester
+
+#### Test 
+
+< mettre photo site depuis LAN >

@@ -54,12 +54,31 @@ Je peux acccéder au site alors ca fonctionne.
 
 ### LAN vers DMZ
 
-Dans la zone démillitarisée on retrouve un serveur WEB et un serveur FTP, accessible depuis le LAN et en théorie ouvert à internet. 
+Dans la zone démillitarisée on retrouve un serveur WEB et un serveur SFTP (un FTP sécurisé via ssh), accessible depuis le LAN et en théorie ouvert à internet. 
 
 Certains flux sont authorisés vers la DMZ cependant le LAN n'acceptera pas les flux inités par une machine de la DMZ afin de sécuriser le LAN de visiteurs extérieurs au réseau.
 
 ![schéma des flux du réseau](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_deploiement.png)
+Tout d'abord on va bloquer le trafic venant de la dmz
 
+* **Pare-feu > règles > LAN > ajouter**
+* Bloquer la source DMZ et tous les ports source vers le destinataire LAN vers tous les ports
+* S'il le faut, faire glisser la règle en dessous de celles autorisant le trafic afin de ne pas bloquer les requêtes initiées par le LAN
+
+l'ordre des champs su l'image est le suivant: protocole, adresse source, port source, adresse de destination, port de destination, queue, schedule, decription.
+
+![ règles DMZ vers LAN](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_lan_dmz.PNG)
+
+
+
+HTTPS / HTTP
+
+* Sur la DMZ on va autoriser le trafic HTTPS/HTTP entrant
+* Sur le LAN, rien à faire puisqu'une règle autorisant à se connecter à un port HTTPS/HTTP a déjà été mise en place
+* **Pare-feu > règles > DMZ > ajouter**
+* Ajouter les règles suivantes:
+
+![regles DMZ entrant HTTPS](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_vers_dmz.PNG)
 
 
 ### DMZ vers internet

@@ -102,4 +102,12 @@ l'ordre des champs su l'image est le suivant: protocole, adresse source, port so
 
 ### DMZ vers internet
 
+Pour autoriser les machines de la DMZ à se connecter à internet, il faudra ajouter des règles d'autorisations de flux entrant comme précédeemment avec le LAN.
+
+* Pare-feu > règles > DMZ
+
+* Ajouter les règles suivantes:
+
+![regles dmz vers internet](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_dmz_internet.PNG)
+
 

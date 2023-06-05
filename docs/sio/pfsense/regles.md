@@ -58,6 +58,8 @@ Dans la zone démillitarisée on retrouve un serveur WEB et un serveur FTP, acce
 
 Certains flux sont authorisés vers la DMZ cependant le LAN n'acceptera pas les flux inités par une machine de la DMZ afin de sécuriser le LAN de visiteurs extérieurs au réseau.
 
+![schéma des flux du réseau](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_deploiement.png)
+
 
 
 ### DMZ vers internet

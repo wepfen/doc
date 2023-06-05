@@ -82,7 +82,9 @@ l'ordre des champs su l'image est le suivant: protocole, adresse source, port so
 
 * Je teste la connexion vers le serveur web de la DMZ
 
-![test connexion web vers DMZ]()https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/test_srv_web_dmz.PNG
+![test connexion web vers DMZ](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/test_srv_web_dmz.PNG)
+
+* Ca fonctionne
 
 #### SFTP
 
@@ -90,4 +92,14 @@ l'ordre des champs su l'image est le suivant: protocole, adresse source, port so
 
 ![ssh entant DMZ](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rules_dmz_ssh_entrant.PNG)
 
+* Sur le LAN, autoriser le ssh entrant avec en source le LAN et en destinataire la DMZ. C'est-à-dire que seule les réponses de requêtes ssh initées par une machine du LAN seront acceptées.
+
+![ssh LAN entrant](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/rule_lan_dmz_ssh.PNG)
+
+* Je teste avec filezilla
+
+![Test sftp filezilla](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/test_sftp_srv_dmz.PNG)
+
 ### DMZ vers internet
+
+

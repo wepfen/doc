@@ -46,4 +46,6 @@ On peut désormais tester
 
 #### Test 
 
-< mettre photo site depuis LAN >
+Je vérifie la connexion d'une machine du LAN vers un site internet
+
+![test connexion LAN vers internet](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/lan_vers_internet.PNG)

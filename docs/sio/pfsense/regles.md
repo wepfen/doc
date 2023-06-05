@@ -11,7 +11,7 @@ Alors pour accéder à internet il faudra autoriser les les flux vers les ports 
 
 ### Filtrage
 Enfin les règles filtrent les flux entrants,  c'est à dire que si on veut autoriser le flux LAN vers internet en HTTPS, je me pace sur l'interface LAN et j'ajoute une règle **autoriser le trafic lan vers n'importe quel destinataire vers le port 443**.
-Automatiquement, les flux en réponse à cette règle seront acceptés, c'est-à-dire un **flux de n'importe quelle adresse d'origine port 443 et destination du LAN**
+Automatiquement, les flux en réponse à cette règle seront acceptés qu'on appelle **quadruplet inversé**, c'est-à-dire un **flux de n'importe quelle adresse d'origine port 443 et destination du LAN**
 
 Plus d'informations sur le [fonctionnement de pFsense](https://docs.netgate.com/pfsense/en/latest/firewall/rule-methodology.html)
 
@@ -49,3 +49,17 @@ On peut désormais tester
 Je vérifie la connexion d'une machine du LAN vers un site internet
 
 ![test connexion LAN vers internet](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/lan_vers_internet.PNG)
+
+Je peux acccéder au site alors ca fonctionne.
+
+### LAN vers DMZ
+
+Dans la zone démillitarisée on retrouve un serveur WEB et un serveur FTP, accessible depuis le LAN et en théorie ouvert à internet. 
+
+Certains flux sont authorisés vers la DMZ cependant le LAN n'acceptera pas les flux inités par une machine de la DMZ afin de sécuriser le LAN de visiteurs extérieurs au réseau.
+
+![schéma des flux du réseau](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/diagramme_deploiement.png)
+
+
+
+### DMZ vers internet

@@ -33,7 +33,11 @@ nav:
         - pFsense: 
             - Pare-feu pFsense virtuel sur ESXI: 'sio/pfsense/index.md'
             - Installation de pFsense sur ESXI: 'sio/pfsense/installation.md' 
+<<<<<<< Updated upstream
             - Configuration de pFsense: 'sio/pfsense/regles.md' 
+=======
+            - Création des règles de pare-feu sur pFsense: 'sio/pfsense/regles.md' 
+>>>>>>> Stashed changes
             - Sauvegarde automatique avec AutoConfigBackup: 'sio/pfsense/autoconfigbackup.md'
         - GLPI: 
             - Gérer le parc informatique avec GLPI: 'sio/glpi/index.md'

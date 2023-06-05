@@ -49,3 +49,15 @@ On peut désormais tester
 Je vérifie la connexion d'une machine du LAN vers un site internet
 
 ![test connexion LAN vers internet](https://raw.githubusercontent.com/1Tyron140/doc/main/images/pfsense/lan_vers_internet.PNG)
+
+Je peux acccéder au site alors ca fonctionne.
+
+### LAN vers DMZ
+
+Dans la zone démillitarisée on retrouve un serveur WEB et un serveur FTP, accessible depuis le LAN et en théorie ouvert à internet. 
+
+Certains flux sont authorisés vers la DMZ cependant le LAN n'acceptera pas les flux inités par une machine de la DMZ afin de sécuriser le LAN de visiteurs extérieurs au réseau.
+
+
+
+### DMZ vers internet

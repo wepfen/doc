@@ -39,6 +39,7 @@ nav:
             - Gérer le parc informatique avec GLPI: 'sio/glpi/index.md'
             - Installation de GLPI: 'sio/glpi/installation_glpi.md'
             - Inventorier le parc Informatique avec FusionInventory: 'sio/glpi/fusion.md'
+            - Création et suivi d'un ticket sur GLPI: 'sio/glpi/creer_ticket.md'
         - Cacti: 
             - Superviser une machine Windows avec Cacti: 'sio/cacti/ajouter_machine.md'   
             - Modifier MariaDB: 'sio/cacti/modifier_mariadb.md'  

@@ -6,7 +6,7 @@ Un ticket permet de regrouper les informations du demandeur et le problème qu'i
 
 ## Créer un ticket sur GLPI
 
-### Les modalités d'ouverture
+### Les modalités d'ouverteture
 
 Un ticket peut être ouvert,
 
@@ -67,7 +67,7 @@ Après avoir ouvert le ticket on peut réaliser le suivi, ajouter des informatio
 
 ![Reponse au ticket GLPI](https://raw.githubusercontent.com/1Tyron140/doc/main/images/glpi/reponse_ticket.PNG)
 
-* Sur la etite flèche à côté de "répondre", cliquer sur ajouter une solution
+* Sur la petite flèche à côté de "répondre", cliquer sur ajouter une solution
 
 ![Ajouter une solution au ticket GLPI](https://raw.githubusercontent.com/1Tyron140/doc/main/images/glpi/solution_ticket.PNG)
 

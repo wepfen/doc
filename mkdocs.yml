@@ -69,9 +69,9 @@ nav:
                 - Sécurité du SFTP: 'sio/sftp/openSUSE/securite.md'
                 - Guide de l'utilisateur du SFTP: 'sio/sftp/openSUSE/guide_utilisateur.md'
             - debian:
-                - Mise en place d'un SFTP sur Debian: 'sio\sftp\debian\introduction.md'
-                - Installation du SFTP sur Debian: 'sio\sftp\debian\installation.md'
-                - Configuration du SFTP sur Debian: 'sio\sftp\debian\configuration.md'
+                - Mise en place d'un SFTP sur Debian: 'sio/sftp/debian/introduction.md'
+                - Installation du SFTP sur Debian: 'sio/sftp/debian/installation.md'
+                - Configuration du SFTP sur Debian: 'sio/sftp/debian/configuration.md'
         - Zootickoon:
             - Création du site web d'un zoo avec un CMS: 'sio/zootickoon/introduction.md'
             - Installation de XAMPP et Wordpress: 'sio/zootickoon/installation.md'
